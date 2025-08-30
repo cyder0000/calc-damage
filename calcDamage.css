@@ -1,0 +1,402 @@
+@charset "UTF-8";
+
+.result {
+    background-color: #fff;
+    color: #333;
+    border-radius: 2vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    text-align: center;
+    margin-bottom: 1vw;
+    font-size: larger;
+    font-weight: bolder;
+    width: 60vw;
+    height: 5em;
+    flex-wrap: wrap;
+}
+.result > h2 {
+    width: 60vw;
+    margin: 0;
+}
+.result>output{
+    width: 25vw;
+}
+.result > span{
+    width: 5vw;
+}
+body {
+    font-family: sans-serif;
+    font-size: 1.2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    color: #333;
+}
+button, input, p {
+    font-family: inherit;
+    font-size: inherit;
+    margin: inherit;
+}
+.title {
+    font-size: 1.6vw;
+    background-color: #fff;
+    margin: 0.8vw 0;
+    padding: 0.8vw;
+    border-radius: 2vw;
+    width: 90vw;
+    text-align: center;
+}
+.tab-container {
+    width: 90vw;
+    background-color: #fff;
+    box-shadow: 0 0.3vw 0.6vw rgba(0, 0, 0, 0.1);
+    border-radius: 1vw;
+    overflow: hidden;
+}
+.tab-header {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+}
+.tab-button {
+    flex: 1;
+    padding: 1vw;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: backgroun-color 0.3s color 0.3s;
+}
+.tab-button:not(:last-of-type) {
+    border-right: 2px solid #ddd;
+}
+.tab-button:hover {
+    background-color: #e9e9e9;
+}
+.tab-button.active {
+    background-color: #007bff;
+    color: white;
+}
+.tab-content {
+    display: none;
+    padding: 1.4vw;
+}
+.tab-content.active:not(#tab4) {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.tab-content.active#tab4{
+    display: flex;
+}
+.tab-content-sub {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.tab-content.active > .tab-content-sub:first-of-type {
+    padding-right: 1.4vw;
+    border-right: 2px solid #ddd;
+}
+.tab-content.active > .tab-content-sub:last-of-type {
+    padding-left: 1.4vw;
+}
+h2 {
+    font-size: 1.5vw;
+    margin: 0 0 0.4vw;
+}
+h3 {
+    font-size: 1.3vw;
+    font-weight: 500;
+    margin: 0.3vw 0 0 0.6vw;
+}
+.seven-grid {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 0.2vw;
+}
+.six-grid {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 0.2vw;
+}
+.five-grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 0.2vw;
+}
+.four-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 0.2vw;
+}
+.three-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 0.2vw;
+}
+.two-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 0.2vw;
+}
+.content-group {
+    padding-top: 0.3vw;
+}
+input[type="number"]:not(.unit-input) {
+    font-size: 0.9vw;
+    font-weight: 300;
+    height: 1.8vw;
+    width: 80%;
+    text-align: right;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 0.6vw;
+    box-sizing: border-box;
+    padding-right: 0.3em;
+}
+.unit-input-container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 1.8vw;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 0.6vw;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.unit-input-container:focus-within {
+    border-color: black;
+    border-width: 2px;
+}
+.unit-input {
+    font-size: 0.9em;
+    font-weight: 300;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.5vw 0;
+    text-align: right;
+    box-sizing: border-box;
+}
+.unit {
+    padding: 1px;
+    font-size: 0.9em;
+    padding-right: 0.5vw;
+    color: #555;
+    cursor: text;
+}
+.tab-content-sub > div:not(:last-of-type) {
+    border-bottom: 2px solid #ddd;
+    padding: 0.2em 0;
+}
+input[type=radio],input[type=checkbox] {
+    display: none;
+}
+label.radio-group {
+    background-color: #ddd;
+    padding: 0.5vw;
+    line-height: 1.4vw;
+    margin: 0.2vw 0.3vw;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+label:has(input[type="radio"]:checked,input[type=checkbox]:checked) {
+    background-color: #007bff;
+    color: #fff;
+}
+small{
+    font-size: 0.6em;
+    font-weight: normal;
+    color: gray;
+}
+.skill-multiplier-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hidden {
+    display: none;
+}
+.two-three-grid > .two-grid {
+    grid-column: 1/3;
+    border-right: 2px solid #ddd;
+}
+.two-three-grid > .three-grid,
+.two-three-grid > .four-grid {
+    grid-column: 3/-1;
+}
+.two-three-grid:not(:last-of-type) {
+    border-bottom: 2px solid #ddd;
+}
+.grayed-out {
+    background-color: #e0e0e0;
+    cursor: default;
+}
+input:disabled {
+    background-color: #e0e0e0;
+}
+.two-grid > h4 {
+    font-weight: 500;
+    grid-column: 1/-1;
+    margin: 0;
+    margin-bottom: -0.5vw;
+}
+.autocalc {
+    background-color: #e0e0e0;
+}
+.autocalc .unit-input {
+    background-color: transparent;
+}
+.onehalf-oneXfive-grid {
+    grid-template-columns: 1..5fr repeat(5,1fr);
+}
+.two-oneXfive-grid {
+    grid-template-columns: 2fr repeat(5,1fr);
+}
+.twohalf-oneXfive-grid {
+    grid-template-columns: 2.5fr repeat(5,1fr);
+    row-gap: 0;
+}
+.autocalc > label.unit {
+    cursor: default;
+}
+.margin-change {
+    margin-bottom: 0.2vw;
+}
+.aura-grid {
+    grid-template-columns: 2fr repeat(4,1fr);
+}
+.mini-font {
+    font-size: 0.8em;
+}
+.twohalf-oneXfive-grid > input[type="number"] {
+    height: 1.3vw;
+}
+.twohalf-oneXfive-grid > .radio-group {
+    padding: 0;
+}
+.twohalf-oneXfive-grid > .unit-input-container {
+    height: 1.3vw;
+}
+.onehalf-oneXfive-grid > p {
+    font-size: 90%;
+}
+.onehalf-oneXfive-grid > .radio-group {
+    padding: 0.2em;
+}
+div#tab3 .radio-group {
+    padding: 0.2em;
+}
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.seven-flex > .radio-group {
+    width: 3.3em;
+}
+.grid-column-1-3 {
+    grid-column: 1/3;
+}
+.grid-column-4-6 {
+    grid-column: 4/6;
+}
+.grid-column-4--1 {
+    grid-column: 4/-1;
+    text-align: left;
+}
+input::placeholder {
+    font-size: 70%;
+}
+.physical-damage:not(.hidden), .magical-damage:not(.hidden) {
+    display: flex;
+    overflow: hidden;
+}
+.damage-left {
+    display: grid;
+    grid-template-columns: 4em 9em;
+}
+.damage-right {
+    display: grid;
+    grid-template-columns: repeat(36,11em);
+    overflow-x: scroll;
+    padding-right: 10vw;
+}
+.physical-damage>*{
+    grid-template-rows: repeat(36,2em);
+}
+.magical-damage>*{
+    grid-template-rows: repeat(67,2em);
+}
+.damage-left * {
+    border: 1px solid black;
+    overflow: hidden;
+}
+.damage-right * {
+    overflow: hidden;
+}
+p.colspan {
+    grid-column: 1/-1;
+}
+.sub-grid {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-template-columns: subgrid;
+    grid-column: 1/-1;
+}
+.sub-grid33, .sub-grid64 {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    grid-column: 1/-1;
+    grid-row: 4/-1;
+}
+.bordered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub-grid > *,
+.sub-grid33 > *,
+.sub-grid64 > * {
+    border: 1px solid black;
+}
+#tab4 p,option {
+    text-align: center;
+}
+output:not(#min-damage,#max-damage) {
+    text-align: right;
+    padding-right: 0.5em;
+}
+footer {
+    margin-top: 2em;
+}
+
+/* input[number]の入力欄横の増減キー消去用 */
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
