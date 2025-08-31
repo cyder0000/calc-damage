@@ -81,9 +81,26 @@ button, input, p {
     display: none;
     padding: 1.4vw;
 }
-.tab-content.active:not(#tab4) {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+@media (orientation: landscape){
+    .tab-content.active:not(#tab4) {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .tab-content.active > .tab-content-sub:first-of-type {
+        padding-right: 1.4vw;
+        border-right: 2px solid #ddd;
+    }
+    .tab-content.active > .tab-content-sub:last-of-type {
+        padding-left: 1.4vw;
+    }
+}
+@media (orientation: portrait) {
+    .tab-content.active:not(#tab4) {
+        display: block;
+    }
+    .tab-content.active > .tab-content-sub:first-of-type {
+        border-bottom: 2px solid #ddd;
+    }
 }
 .tab-content.active#tab4{
     display: flex;
@@ -92,13 +109,6 @@ button, input, p {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-}
-.tab-content.active > .tab-content-sub:first-of-type {
-    padding-right: 1.4vw;
-    border-right: 2px solid #ddd;
-}
-.tab-content.active > .tab-content-sub:last-of-type {
-    padding-left: 1.4vw;
 }
 h2 {
     font-size: 1.5vw;
