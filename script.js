@@ -502,6 +502,23 @@ changeCheck.forEach(element => {
 });
 window.addEventListener("load", calc);
 
+// スマホ時カーソル移動関数
+function isSmartphone() {
+  const userAgent = navigator.userAgent.toLowerCase();
+  return /iphone|android.*mobile/.test(userAgent);
+}
+document.querySelectorAll("input[type=number]").forEach(element=>{
+    element.addEventListener("focus",()=>{
+        if(isSmartphone()){
+            element.type="text";
+            element.setSelectionRange(element.value.length,element.value.length);
+            element.type="number"
+        }else{
+            document.querySelector("[name=test-damage-physical").value="2"
+        }
+    })
+})
+
 // タブ切替関数
 document.addEventListener("DOMContentLoaded", function() {
 const tabButtons = document.querySelectorAll(".tab-button");
@@ -519,4 +536,5 @@ tabButtons.forEach(button => {
         }
     });
 });
+
 });
