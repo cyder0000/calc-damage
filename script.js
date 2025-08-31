@@ -513,8 +513,6 @@ document.querySelectorAll("input[type=number]").forEach(element=>{
             element.type="text";
             element.setSelectionRange(element.value.length,element.value.length);
             element.type="number"
-        }else{
-            document.querySelector("[name=test-damage-physical").value="2"
         }
     })
 })
@@ -538,3 +536,4 @@ tabButtons.forEach(button => {
 });
 
 });
+
