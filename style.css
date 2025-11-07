@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+* {
+    font-family: sans-serif;
+}
+
+h4 {
+    margin-bottom: 0.1em;
+}
+
+.nav-item {
+    font-size: min(3vw, 1rem);
+}
+
+.w-cont {
+    width: 100%;
+}
+
+.content-border {
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+input:disabled + span,
+input:disabled + label {
+    background-color: var(--bs-secondary-bg) !important;
+}
+
+input::placeholder,
+input[placeholder]:disabled {
+    color: #ced4da !important;
+}
+
+.minw-56 {
+    min-width: calc(56em + 7px);
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+th,
+td {
+    width: 11em;
+    vertical-align: middle;
+    padding: 20px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+th[colspan="2"] {
+    width: 22em;
+}
+
+th:first-child,
+td:first-child {
+    position: sticky;
+    top: 0;
+    left: 0;
+    border-left: none;
+    border-right: none;
+    z-index: 2;
+}
+
+th:not([colspan]) + th:nth-child(2),
+td:not([colspan]) + td:nth-child(2) {
+    position: sticky;
+    top: 0;
+    left: 176px;
+    background: white;
+    z-index: 2;
+}
+th:first-child::before,
+td:first-child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: -0.8px;
+    left: 0;
+    right: 0;
+    border-left: 0.8px solid #dee2e6;
+    border-right: 0.8px solid #dee2e6;
+    z-index: -1;
+}
+
+th:not([colspan]) + th:nth-child(2),
+td:not([colspan]) + td:nth-child(2) {
+    border-left: none;
+    border-right: none;
+}
+
+th:not([colspan]) + th:nth-child(2)::before,
+td:not([colspan]) + td:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: -0.8px;
+    left: -0.8px;
+    right: 0;
+    border-left: none;
+    border-right: 0.8px solid #dee2e6;
+    z-index: -1;
+}
+
+th:not([colspan]) + th + th,
+td:not([colspan]) + td + td,
+th[colspan] + th,
+td[colspan] + td {
+    border-left: none;
+}
+
+tbody > tr:nth-child(n + 1) > td:nth-child(n + 2) {
+    text-align: end;
+}
+
+textarea {
+    width: 80%;
+    height: 6rem;
+}
+
+/* lg以上 */
+@media (min-width: 992px) {
+    .content-border {
+        border-bottom: none;
+        border-right: 1px solid var(--bs-border-color);
+    }
+}
+
+@media (min-width: 1200px) {
+    .w-cont {
+        width: 1200px;
+    }
+}
+
+[data-lang="japanese"] {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.no-spin::-webkit-inner-spin-button,
+.no-spin::-webkit-outer-spin-button,
+th input[type="number"]:disabled::-webkit-inner-spin-button,
+th input[type="number"]:disabled::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* デバッグ用 */
+/* input[type="number"]:disabled:not([name]) {
+    background-color: red !important;
+}
+input[type="number"]:not([step="any"]) {
+    background-color: blue !important;
+} */
