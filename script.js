@@ -388,7 +388,7 @@ function calcBuff(element) {
 const modOutput = document.querySelectorAll("[id^=multiplier]");
 function setMods() {
     mod = [
-        Math.trunc(Math.round(vars.skill * 100) * (vars.mode + sum.multi)) / 100,
+        Math.trunc(vars.skill * (vars.mode + sum.multi)) / 10000,
         mod[1],
         Math.max(limit(btVars.eleResBuffs) + limit(btVars.atkDebuffs), -1),
         vars.multiplier.multiplier4,
@@ -549,6 +549,7 @@ document.querySelector('[data-bs-target="#tab4"]').addEventListener("click", () 
     modOutput.forEach((output, index) => {
         if (output.disabled === true) output.value = format(mod[index] + (options[index] !== 7));
     });
+    modOutput[0].value=Math.round(mod[0]*100);
 });
 
 // ダメージ検証行用計算
