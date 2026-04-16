@@ -388,7 +388,7 @@ function calcBuff(element) {
 const modOutput = document.querySelectorAll("[id^=multiplier]");
 function setMods() {
     mod = [
-        Math.trunc(vars.skill * (vars.mode + sum.multi)) / 10000,
+        Math.trunc(vars.skill * (vars.mode + sum.multi)) / 100,
         mod[1],
         Math.max(limit(btVars.eleResBuffs) + limit(btVars.atkDebuffs), -1),
         vars.multiplier.multiplier4,
